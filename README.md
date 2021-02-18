@@ -55,11 +55,11 @@ wstool init src
 # Clone and install PEEP
 ```
   cd ~/peep_ws/src
-  git clone https:/robowind/peep/peep.git
+  git clone https://github.com/robo-wind/peep/peep.git
   cd peep
   git config credential.helper store
   cd ~/peep_ws/src
-  git clone https://robowind/peep/peep_models.git
+  git clone https://github.com/robo-wind/peep/peep_models.git
   cd ~/peep_ws/src/peep_models
   git lfs pull
 ```
@@ -71,7 +71,7 @@ wstool init src
   mkdir build
   cd build
   cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON
-  make -j4
+  make -j4:wq
   sudo make install
 ```
 # Build/Install ccore_all
