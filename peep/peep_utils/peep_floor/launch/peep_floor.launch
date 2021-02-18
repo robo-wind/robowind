@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find peep_launch)/launch/hw_specific/rd_machines.launch"/>
+
+  <arg name="detect_apriltags"  default="true"/>
+  <arg name="output" default="screen" />
+  <arg name="machine" default="localhost"/>
+  <arg name="pub_path" default="/perception/vision"/>
+
+  <arg name="hub_pub" default="zmq-tcp://10.102.111.11:12800"/>
+  <arg name="hub_sub" default="zmq-tcp://10.102.111.11:12801"/>
+  <arg name="rgb_image_topic" value="rgb/image_rect"/>
+  <arg name="rgb_camera_info" value="rgb/camera_info"/>
+  <arg name="depth_image_topic" value="depth/image_rect"/>
+  <arg name="depth_camera_info" value="depth/camera_info"/>
+
+  <arg name="camera_name_rs0" default="rs_801212070404"/>
+  <arg name="camera_name_rs1" default="rs_817612071388"/>
+
+  <arg name="camera_name_0" default="axis_10_102_111_120"/>
+  <arg name="camera_name_1" default="axis_10_102_111_119"/>
+  <arg name="camera_name_2" default="axis_10_102_111_118"/>
+  <arg name="camera_name_3" default="axis_10_102_111_117"/>
+  <arg name="camera_name_4" default="axis_10_102_111_116"/>
+  <arg name="camera_name_5" default="axis_10_102_111_115"/>
+  <arg name="camera_name_6" default="axis_10_102_111_114"/>
+  <arg name="camera_name_7" default="axis_10_102_111_113"/>
+  <arg name="camera_name_8" default="axis_10_102_111_112"/>
+  <arg name="camera_name_9" default="axis_10_102_111_111"/>
+
+  <include file="$(find peep_launch)/launch/hw_specific/$(arg camera_name_0).launch">
+    <arg name="max_framerate" value="1"/>
+    <arg name="rectify"   value="true"/>
+  </include>
+  <include file="$(find peep_launch)/launch/hw_specific/$(arg camera_name_1).launch">
+    <arg name="max_framerate" value="1"/>
+     <arg name="rectify"   value="true"/>
+  </include>
+  <include file="$(find peep_launch)/launch/hw_specific/$(arg camera_name_2).launch">
+    <arg name="max_framerate" value="1"/>
+    <arg name="rectify"   value="true"/>
+  </include>
+   <include file="$(find peep_launch)/launch/hw_specific/$(arg camera_name_3).launch">
+    <arg name="max_framerate" value="1"/>
+    <arg name="rectify"   value="true"/>
+  </include>  
+  <include file="$(find peep_launch)/launch/hw_specific/$(arg camera_name_4).launch">
+    <arg name="max_framerate" value="1"/>
+    <arg name="rectify"   value="true"/>
+  </include>
+  <include file="$(find peep_launch)/launch/hw_specific/$(arg camera_name_5).launch">
+    <arg name="max_framerate" value="1"/>
+    <arg name="rectify"   value="true"/>
+  </include>
+  <include file="$(find peep_launch)/launch/hw_specific/$(arg camera_name_6).launch">
+    <arg name="max_framerate" value="1"/>
+    <arg name="rectify"   value="true"/>
+  </include>
+  <include file="$(find peep_launch)/launch/hw_specific/$(arg camera_name_7).launch">
+    <arg name="max_framerate" value="1"/>
+    <arg name="rectify"   value="true"/>
+  </include>
+  <include file="$(find peep_launch)/launch/hw_specific/$(arg camera_name_8).launch">
+    <arg name="max_framerate" value="1"/>
+    <arg name="rectify"   value="true"/>
+  </include>
+  <include file="$(find peep_launch)/launch/hw_specific/$(arg camera_name_9).launch">
+    <arg name="max_framerate" value="1"/>
+    <arg name="rectify"   value="true"/>
+  </include>
+<!-- 
+  <group ns="$(arg camera_name_rs0)">
+    <include if="$(arg detect_apriltags)" file="$(find peep_floor)/launch/apriltag_detector.launch">
+      <arg name="rgb_image_topic" value="$(arg rgb_image_topic)" />
+      <arg name="rgb_camera_info" value="$(arg rgb_camera_info)" />
+    </include>
+
+
+    <node name="peep_floor" pkg="peep_floor" type="peep_floor_node" output="$(arg output)">
+    </node>
+
+    <include file="$(find peep_ccore)/launch/ccore2peep_camera_broadcaster_node.launch">
+        <arg name="output"  value="log"/>
+        <arg name="ccore_camera_path" value="$(arg pub_path)/$(arg camera_name_rs0)"/>
+        <arg name="hub_pub" value="$(arg hub_pub)"/>
+        <arg name="hub_sub" value="$(arg hub_sub)"/>
+        <arg name="rgb_image_topic" value="$(arg rgb_image_topic)"/>
+        <arg name="rgb_camera_info" value="$(arg rgb_camera_info)"/>
+        <arg name="depth_image_topic" value="$(arg depth_image_topic)"/>
+        <arg name="depth_camera_info" value="$(arg depth_camera_info)"/>
+        <arg name="machine" value="$(arg machine)"/>
+    </include>
+  </group> -->
+ <!--
+  <group ns="$(arg camera_name_rs1)">
+    <include if="$(arg detect_apriltags)" file="$(find peep_floor)/launch/apriltag_detector.launch">
+      <arg name="rgb_image_topic" value="$(arg rgb_image_topic)" />
+      <arg name="rgb_camera_info" value="$(arg rgb_camera_info)" />
+    </include>
+
+
+    <node name="peep_floor" pkg="peep_floor" type="peep_floor_node" output="$(arg output)">
+    </node>
+
+    <include file="$(find peep_ccore)/launch/ccore2peep_camera_broadcaster_node.launch">
+        <arg name="output"  value="log"/>
+        <arg name="ccore_camera_path" value="$(arg pub_path)/$(arg camera_name_rs1)"/>
+        <arg name="hub_pub" value="$(arg hub_pub)"/>
+        <arg name="hub_sub" value="$(arg hub_sub)"/>
+        <arg name="rgb_image_topic" value="$(arg rgb_image_topic)"/>
+        <arg name="rgb_camera_info" value="$(arg rgb_camera_info)"/>
+        <arg name="depth_image_topic" value="$(arg depth_image_topic)"/>
+        <arg name="depth_camera_info" value="$(arg depth_camera_info)"/>
+        <arg name="machine" value="$(arg machine)"/>
+    </include>
+
+
+  </group> -->
+
+  <group ns="$(arg camera_name_0)">
+    <include if="$(arg detect_apriltags)" file="$(find peep_floor)/launch/apriltag_detector.launch">
+      <arg name="rgb_image_topic" value="image_rect" />
+      <arg name="rgb_camera_info" value="camera_info" />
+    </include>
+
+    <node name="peep_floor" pkg="peep_floor" type="peep_floor_node" output="$(arg output)">
+    </node>
+  </group>
+
+  <group ns="$(arg camera_name_1)">
+    <include if="$(arg detect_apriltags)" file="$(find peep_floor)/launch/apriltag_detector.launch">
+      <arg name="rgb_image_topic" value="image_rect" />
+      <arg name="rgb_camera_info" value="camera_info" />
+    </include>
+
+    <node name="peep_floor" pkg="peep_floor" type="peep_floor_node" output="$(arg output)">
+    </node>
+  </group>
+
+  <group ns="$(arg camera_name_2)">
+    <include if="$(arg detect_apriltags)" file="$(find peep_floor)/launch/apriltag_detector.launch">
+      <arg name="rgb_image_topic" value="image_rect" />
+      <arg name="rgb_camera_info" value="camera_info" />
+    </include>
+
+    <node name="peep_floor" pkg="peep_floor" type="peep_floor_node" output="$(arg output)">
+    </node>
+  </group>
+
+  <group ns="$(arg camera_name_3)">
+    <include if="$(arg detect_apriltags)" file="$(find peep_floor)/launch/apriltag_detector.launch">
+      <arg name="rgb_image_topic" value="image_rect" />
+      <arg name="rgb_camera_info" value="camera_info" />
+    </include>
+
+    <node name="peep_floor" pkg="peep_floor" type="peep_floor_node" output="$(arg output)">
+    </node>
+  </group>
+
+  <group ns="$(arg camera_name_4)">
+    <include if="$(arg detect_apriltags)" file="$(find peep_floor)/launch/apriltag_detector.launch">
+      <arg name="rgb_image_topic" value="image_rect" />
+      <arg name="rgb_camera_info" value="camera_info" />
+    </include>
+
+    <node name="peep_floor" pkg="peep_floor" type="peep_floor_node" output="$(arg output)">
+    </node>
+  </group>
+
+  <group ns="$(arg camera_name_5)">
+    <include if="$(arg detect_apriltags)" file="$(find peep_floor)/launch/apriltag_detector.launch">
+      <arg name="rgb_image_topic" value="image_rect" />
+      <arg name="rgb_camera_info" value="camera_info" />
+    </include>
+
+    <node name="peep_floor" pkg="peep_floor" type="peep_floor_node" output="$(arg output)">
+    </node>
+  </group>
+
+  <group ns="$(arg camera_name_6)">
+    <include if="$(arg detect_apriltags)" file="$(find peep_floor)/launch/apriltag_detector.launch">
+      <arg name="rgb_image_topic" value="image_rect" />
+      <arg name="rgb_camera_info" value="camera_info" />
+    </include>
+
+    <node name="peep_floor" pkg="peep_floor" type="peep_floor_node" output="$(arg output)">
+    </node>
+  </group> 
+
+  <group ns="$(arg camera_name_7)">
+    <include if="$(arg detect_apriltags)" file="$(find peep_floor)/launch/apriltag_detector.launch">
+      <arg name="rgb_image_topic" value="image_rect" />
+      <arg name="rgb_camera_info" value="camera_info" />
+    </include>
+
+    <node name="peep_floor" pkg="peep_floor" type="peep_floor_node" output="$(arg output)">
+    </node>
+  </group>
+  
+  <group ns="$(arg camera_name_8)">
+    <include if="$(arg detect_apriltags)" file="$(find peep_floor)/launch/apriltag_detector.launch">
+      <arg name="rgb_image_topic" value="image_rect" />
+      <arg name="rgb_camera_info" value="camera_info" />
+    </include>
+
+    <node name="peep_floor" pkg="peep_floor" type="peep_floor_node" output="$(arg output)">
+    </node>
+  </group>
+  <group ns="$(arg camera_name_9)">
+    <include if="$(arg detect_apriltags)" file="$(find peep_floor)/launch/apriltag_detector.launch">
+      <arg name="rgb_image_topic" value="image_rect" />
+      <arg name="rgb_camera_info" value="camera_info" />
+    </include>
+
+    <node name="peep_floor" pkg="peep_floor" type="peep_floor_node" output="$(arg output)">
+    </node>
+  </group>
+</launch>

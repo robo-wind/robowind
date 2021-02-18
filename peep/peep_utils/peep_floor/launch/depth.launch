@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+  
+  <!-- Construct point cloud of the rgb and depth topics -->
+  <arg name="camera0" default="rs415_801212070404"/>
+  <group ns="$(arg camera0)">
+    <arg name="rgb_image_topic" value="color/image_raw"/>
+    <arg name="rgb_camera_info" value="color/camera_info"/>
+    <arg name="depth_image_topic" value="depth/image_rect_raw"/>
+    <arg name="depth_camera_info" value="depth/camera_info"/>
+    <arg name="out_cloud" value="points"/>
+
+    <node pkg="nodelet" type="nodelet" name="standalone_nodelet" args="manager" output="screen"/>
+    <node pkg="nodelet" type="nodelet" name="points_xyzrgb" args="load depth_image_proc/point_cloud_xyzrgb standalone_nodelet --no-bond">
+        <remap from="rgb/camera_info" to="$(arg rgb_camera_info)" />  
+        <remap from="rgb/image_rect_color" to="$(arg rgb_image_topic)"/>  
+        <remap from="depth_registered/image_rect" to="$(arg depth_image_topic)"/>  
+        <remap from="depth_registered/points" to="$(arg out_cloud)"/>
+    </node>
+  </group>
+</launch>

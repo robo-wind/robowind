@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<launch>
+    <!--<include file="$(find peep_launch)/launch/hw_specific/rd_machines.launch"/>-->
+
+  <arg name="detect_apriltags"  default="true"/>
+
+  <arg name="output" default="screen"/>
+  <arg name="rectify_image" default="true"/>
+  <arg name="publish_to_ccore" default="false"/>
+  
+     <arg name="camera_serial0" default="18288154"/>
+    <arg name="camera_name0" default="bf_$(arg camera_serial0)"/>
+    <include file="$(find pointgrey_camera_driver)/launch/camera.launch">
+        <arg name="camera_name" value="$(arg camera_name0)"/>
+        <arg name="camera_serial" value="$(arg camera_serial0)"/>
+         <arg name="rectify" value="true"/>
+         <arg name="calibrated" value="true"/>
+         <!--<arg name="publish_to_ccore" value="$(arg publish_to_ccore)"/>-->
+         <!-- <arg name="rectify_image" value="$(arg rectify_image)"/>-->
+    </include>
+
+    <group ns="$(arg camera_name0)">
+    <include if="$(arg detect_apriltags)" file="$(find peep_floor)/launch/apriltag_detector.launch">
+      <arg name="rgb_image_topic" value="image_rect" />
+      <arg name="rgb_camera_info" value="camera_info" />
+    </include>
+    <node name="peep_floor" pkg="peep_floor" type="peep_floor_node" output="$(arg output)">
+    </node>
+  </group>
+
+
+
+</launch>
