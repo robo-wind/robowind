@@ -90,7 +90,7 @@ wstool init src
 
 ## Build/Install librealsense
 
-# _external/librealsense/
+# peep_external/librealsense/
   mkdir build
   cd build
   cmake .. -DCMAKE_BUILD_TYPE=Release
@@ -102,7 +102,10 @@ wstool init src
 rosrun robot_upstart install peep_launch/launch/local_node_intel_pipeline.launch --job peep --setup /home/robowind/peep_ws/src/peep/source_intel.sh
 
 #  3-D Localization and Mapping:
-  ## 2. Prerequisites
+
+## 2. Prerequisites
+
+
 ### 2.1 **Ubuntu** and **ROS**
 
 Ubuntu 64-bit 18.04.
