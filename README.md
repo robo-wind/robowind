@@ -32,7 +32,48 @@
 # Set up System (Deps, Git, SSH key)
 ```
   sudo apt install gtk+-3.0 libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev libc++-dev libc++abi-dev python-pip libgflags-dev libopenblas-dev
-  git config --global user.email "$USER@$HOSTNAME"
+  git config --global user.email "$USER@$HOSTNAME" 
+  
+  #  3-D Localization and Mapping:
+  ## 2. Prerequisites
+### 2.1 **Ubuntu** and **ROS**
+Ubuntu 64-bit 18.04.
+
+ROS Melodic. [ROS Installation](http://wiki.ros.org/ROS/Installation)
+
+### 2.2. **Ceres Solver**
+Follow [Ceres Installation](http://ceres-solver.org/installation.html).
+
+### 2.3. **PCL**
+Follow [PCL Installation](http://www.pointclouds.org/downloads/linux.html).
+
+Tested with 1.8.1
+
+### 2.4 **OctoMap**
+Follow [OctoMap Installation](http://wiki.ros.org/octomap).
+
+```bash
+$ sudo apt install ros-melodic-octomap*
+```
+
+### 2.5. **Trajectory visualization**
+For visualization purpose, this package uses hector trajectory sever, you may install the package by
+```
+sudo apt-get install ros-melodic-hector-trajectory-server
+```
+Alternatively, you may remove the hector trajectory server node if trajectory visualization is not needed
+## 4.4 Launch ROS
+```
+    roslaunch peep peep_slam_L515.launch
+```
+
+
+
+  
+  
+  
+  
+  # 
   git config --global user.name "$USER@$HOSTNAME"  
   ssh-keygen -t rsa -C "$USER@$HOSTNAME"
 ```
