@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/davisking/dlib.git
+	branch = master
+	commit = 61a021c932b74e591ce6a57ec1efa2dd59f33a7f
+	parent = 5319c7e0d51d1d11cea54254d388c21b75ec6db6
+	method = merge
+	cmdver = 0.4.0

@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/CMU-Perceptual-Computing-Lab/openpose.git
+	branch = master
+	commit = 7c21e0b6b184e4dd0b7e119f470089a4149b6e2d
+	parent = 8f6567b93b42326257bdee7bd037e0c95c3fb0f6
+	cmdver = 0.3.1
