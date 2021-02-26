@@ -4,6 +4,7 @@ project(dc_motor_controller)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   message_generation
+  robobus
 )
 
 ################################################

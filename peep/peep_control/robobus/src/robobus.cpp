@@ -47,7 +47,7 @@ int main(int argc, char **argv)
   ros::ServiceServer writeService = n.advertiseService("serial_write", serialWrite);
   
   //Set the update rate of the node to be 10Hz
-  ros::Rate loop_rate(10);
+  ros::Rate loop_rate(500);
   
   //Initialize the serial port
   int serialPort = initSerialPort();
@@ -97,7 +97,7 @@ void updateWriteOperations(int serialPort)
     transmitArray[transmitArrayHead] = requestBuffer[currentIndex].parameter & 0x00FF;
     transmitArrayHead++;
     
-    transmitArray[transmitArrayHead] = requestBuffer[currentIndex].parameter & 0xFF00;
+    transmitArray[transmitArrayHead] = (requestBuffer[currentIndex].parameter & 0xFF00) >> 8;
     transmitArrayHead++;
     
     transmitArray[transmitArrayHead] = transmitArray[transmitArrayHead - 1] +

@@ -19,7 +19,6 @@ ros::ServiceClient serialWriteClient;
 
 
 
-//---------------------------FUNCTION PROTOTYPES----------------------------//
 void serialReadCallback(const robobus::SerialRead::ConstPtr &msg);
 bool controlMotor(dc_motor_controller::DCMotorControl::Request  &req,
 		  dc_motor_controller::DCMotorControl::Response &res);
@@ -33,8 +32,8 @@ int main(int argc, char **argv)
 	ros::NodeHandle n;
   
 	//Obtain and save the address for this particular node instance
-	ros::param::get(ros::this_node::getName() + "address", address);
-        ros::param::get(ros::this_node::getName() + "is_group_address", addressType);
+	ros::param::get(ros::this_node::getName() + "/address", address);
+        ros::param::get(ros::this_node::getName() + "/is_group_address", addressType);
 
 	//Create a service client for the robobus node
 	serialWriteClient = n.serviceClient<robobus::SerialWrite>("/serial_write");
@@ -183,7 +182,7 @@ bool controlMotor(dc_motor_controller::DCMotorControl::Request  &req,
 			case COMMAND_CONSTANT_SPEED_ENCODER:
 			{
 				//Refer to DC Motor Controller V3 Datasheet section 6.4 for calculation
-				int16_t calculatedSpeed = req.parameter/50000;
+				int16_t calculatedSpeed = req.parameter/50;
 				motorRequest.request.parameter = calculatedSpeed;
 			}
 			break;
