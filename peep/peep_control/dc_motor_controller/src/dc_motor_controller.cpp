@@ -19,6 +19,7 @@ ros::ServiceClient serialWriteClient;
 
 
 
+//---------------------------FUNCTION PROTOTYPES----------------------------//
 void serialReadCallback(const robobus::SerialRead::ConstPtr &msg);
 bool controlMotor(dc_motor_controller::DCMotorControl::Request  &req,
 		  dc_motor_controller::DCMotorControl::Response &res);
