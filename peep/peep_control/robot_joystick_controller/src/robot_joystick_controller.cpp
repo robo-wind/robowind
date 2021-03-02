@@ -42,8 +42,8 @@ int main(int argc, char **argv)
 void joystickCallback(const sensor_msgs::Joy::ConstPtr& msg)
 {
 	//Calculate the common-mode speed of the tracks
-	int32_t trailingDriveSpeed = -msg->axes[0]*2500;
-	int32_t leadingDriveSpeed = trailingDriveSpeed;
+	int32_t trailingDriveSpeed = -msg->axes[0]*2000;
+	int32_t leadingDriveSpeed = -trailingDriveSpeed;
 
 	//Calculate differential speed of the tracks
 	trailingDriveSpeed += msg->axes[2]*1250;
@@ -55,22 +55,22 @@ void joystickCallback(const sensor_msgs::Joy::ConstPtr& msg)
 	
 	if(msg->buttons[11])
 	{
-		trailingLifterPower = 200;
+		trailingLifterPower = 255;
 	}
 	
 	if(msg->buttons[10])
 	{
-		trailingLifterPower = -200;
+		trailingLifterPower = -255;
 	}
 	
 	if(msg->buttons[7])
 	{
-		leadingLifterPower = 200;
+		leadingLifterPower = 255;
 	}
 	
 	if(msg->buttons[6])
 	{
-		leadingLifterPower = -200;
+		leadingLifterPower = -255;
 	}
 
 	//Send control signals to the motor controllers
