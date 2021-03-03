@@ -1,0 +1,4 @@
+uint8 command
+bool[] parameter_bits
+---
+int16 value
