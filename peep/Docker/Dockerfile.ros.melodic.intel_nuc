@@ -1,0 +1,133 @@
+FROM intelopencl/intel-opencl:ubuntu-18.04-ppa as builder
+
+ARG git_un
+ARG git_pw
+
+MAINTAINER fmiranda <fmiranda@robowind.com>
+
+#############################################################
+# Linux  
+#############################################################
+# Install linux dependencies
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y gtk+-3.0 \
+    libglfw3-dev \
+    libgl1-mesa-dev \
+    libglu1-mesa-dev \
+    libc++-dev \
+    libc++abi-dev \
+    python-pip \
+    libgflags-dev \
+    libopenblas-dev \
+    software-properties-common \
+    libcairo2-dev \
+    libpango1.0-dev \
+    libglib2.0-dev \
+    libgtk2.0-dev \
+    libswscale-dev \
+    libavcodec-dev \
+    libavformat-dev \
+    libgstreamer1.0-0 \
+    gstreamer1.0-plugins-base \
+    build-essential \
+    cmake \
+    libusb-1.0-0-dev \
+    libdrm-dev \
+    libpng-dev \
+    cpio \
+    libusb-1.0-0-dev \
+    wget && \
+    apt-get clean && \
+    apt-get autoremove && \
+    rm -rf /var/lib/apt/lists
+
+# Install git-lfs
+RUN add-apt-repository ppa:git-core/ppa && \
+    curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
+    apt-get install -y git-lfs && \
+    git lfs install && \
+    apt-get clean && \
+    apt-get autoremove && \
+    rm -rf /var/lib/apt/lists
+
+##################################################################
+# INSTALL ROS
+##################################################################
+RUN sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list' 
+RUN apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+RUN apt-get update && apt-get install -y ros-melodic-ros-base \
+    ros-melodic-perception \
+    python-catkin-tools \
+    ros-melodic-diagnostic-updater \
+    python-rosinstall \
+    python-rosinstall-generator \
+    python-wstool \
+    build-essential && \
+    apt-get clean && \
+    apt-get autoremove && \
+    rm -rf /var/lib/apt/lists
+# Setup ROS environment variables globally
+RUN echo 'source /opt/ros/melodic/setup.bash' >> /etc/bash.bashrc 
+
+##################################################################
+# INSTALL PEEP
+##################################################################
+RUN mkdir -p /root/peep_ws/src 
+RUN wstool init /root/peep_ws/src
+
+####   Get PEEP Repos
+RUN git clone https://github.com/robo-wind/robowind.git /root/peep_ws/src/peep
+RUN git clone https://github.com/robo-wind/robowind_models.git /root/peep_ws/src/peep_models
+RUN cd /root/peep_ws/src/peep_models && git lfs pull
+
+#### Build CCore
+RUN  cd /root/peep_ws/src/peep/peep_external/ccore_all && \
+     mkdir build && \
+     cd build && \
+     cmake .. -DCMAKE_BUILD_TYPE=Release -DLIBBSON_SUPPORT=True && \
+     make -j"$(nproc)" && \
+     make install && \
+     cd .. && \
+     rm -rf build
+
+#### Build Dlib
+RUN  cd /root/peep_ws/src/peep/peep_external/dlib/dlib && \
+     mkdir build && \
+     cd build && \
+     cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON && \
+     make -j"$(nproc)" && \
+     make install && \
+     cd .. && \
+     rm -rf build
+
+## OpenVINO
+RUN wget http://registrationcenter-download.intel.com/akdlm/irc_nas/15013/l_openvino_toolkit_p_2018.5.445.tgz && \
+    tar -zxf l_openvino_toolkit_p_2018.5.445.tgz && \
+    cd l_openvino_toolkit_p_2018.5.445 && \
+    sed -i 's/decline/accept/g' silent.cfg && \
+    ./install.sh --silent silent.cfg && \
+    echo './opt/intel/computer_vision_sdk/bin/setupvars.sh' >> /etc/bash.bashrc 
+
+
+#### BUILD PEEP
+RUN rosdep init && rosdep update
+
+#This shouldn't be needed, but sometimes realsense build hangs if we don't do it separately first.
+RUN /bin/bash -c "source /opt/ros/melodic/setup.sh && \
+                  cd /root/peep_ws && catkin init && catkin build ros_rs_camera"
+
+RUN /bin/bash -c "source /opt/intel/computer_vision_sdk/bin/setupvars.sh && \
+                  source /opt/ros/melodic/setup.sh && \
+                  cd /root/peep_ws && catkin build"
+
+### Can set some random value for this arg when building to force pulling of repos
+ARG force_pull
+
+RUN cd /root/peep_ws/src/peep && git pull && cd /root/peep_ws/src/peep_models && git pull && git lfs pull
+
+RUN /bin/bash -c "source /opt/intel/computer_vision_sdk/bin/setupvars.sh && \
+                  source /opt/ros/melodic/setup.sh && \
+                  cd /root/peep_ws && catkin build"
+
+WORKDIR /root/peep_ws
+CMD ["/bin/bash"]
