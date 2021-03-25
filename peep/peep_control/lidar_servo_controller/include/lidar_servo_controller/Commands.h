@@ -1,0 +1,8 @@
+#ifndef COMMANDS_H
+#define COMMANDS_H
+
+#define COMMAND_SET_SERVO_YAW		1
+#define COMMAND_SET_SERVO_PITCH 	2
+#define COMMAND_GET_DISTANCE		3
+
+#endif

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>lidar_servo_controller</name>
+  <version>0.0.0</version>
+  <description>A package that provides a node to control the lidar servo controller on the RoboBus</description>
+
+  <maintainer email="alittleton@robowind.com">Alexander Littleton</maintainer>
+
+  <license>Proprietary</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <build_depend>messsage_generation</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>robobus</build_depend>
+  
+  <build_export_depend>roscpp</build_export_depend>
+  
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>robobus</exec_depend>
+
+  <export>
+
+  </export>
+  
+</package>
