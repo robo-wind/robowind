@@ -1,5 +1,83 @@
 # robowind Perception AI toolkit (Peep)
 
+Perceptual Element Ensemble Pipeline (peep), which is platform than includes:
+
+    Modular Perception Elements
+    Temporal & Spatial Elements & Fuses any cameras.   
+    Algorithm Agnostic & Standardized Scenegraph   
+
+
+In details we have four main components
+
+    Rover system
+    Drone system
+    Ground Control
+    User ipad/iphone/Android Interface
+
+Peep its structure as follow:
+
+    peep_control: Contains all the system controller
+
+    ac_motor_controller
+    dc_motor_controller
+    arduino
+    robot_joystick controller
+
+    peep_msg: Contains all the general message and fuse scenegraph
+
+    peep_external: Third parties software like realsense drivers and deep AI frameworks
+    
+    peep_services:
+    1. ros publish to webserver to be able to display on ipad
+    2. ground control system drone rover
+
+    peep_simulation: interaction with simulation system
+    
+    peep_slam: Location and Mapping
+
+At Rover and the Drone system is organized as:
+
+    Autonomous system
+    Drive system
+    Odometry system
+
+On the Autonomous system we have following nodes:
+
+    Multiple camera Ros node (For depth and Slam) 
+    RGB_odometry. Its computed using visual features and depth information 
+    rtabmap: Creates a 3d point cloud of environments and 2d grid for navigation
+    move_base: Given a goal in the world it will attempt to control robot to reach 
+    cost_map: Creates a costmap of the world and represents how safe its to be on any location
+    Global planner: Finds minimum plan from start point to end point
+    Local Planner: Given a plan and a costmap local planner produces velocity and commands to send to motor
+    3D location and mapping with Lidar:
+
+    Octo mapping 
+    Trajectory visualization 
+    Laser mapping 
+    Odom estimation 
+
+
+Odometry system:
+
+    IMU hardware:
+
+    Local location: Fuse local position in the odom frame
+    Global location: Fuse globally position in the map frame
+
+    GPS hardware
+
+       Navigation transform: Set navigation gals using latitude and longitude
+
+Drive system we have:
+
+     Xbox controller: joystick control
+
+On Drone we have done bridge Mission planner with ground control
+
+
+
+
 Choose ROS version:
 
 # Install ROS Melodic
