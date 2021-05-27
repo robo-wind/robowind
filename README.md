@@ -238,3 +238,4 @@ Alternatively, you may remove the hector trajectory server node if trajectory vi
 
 [Arch.pdf](https://github.com/robo-wind/robowind/files/6557206/Arch.pdf)
 
+![2021-05-27_16-11](https://user-images.githubusercontent.com/77466999/119908144-cde55580-bf06-11eb-9dc6-a8352fa36760.png)
