@@ -1,4 +1,4 @@
-![arc](https://user-images.githubusercontent.com/77466999/119907685-ae016200-bf05-11eb-9165-cffdc0ffdcbb.jpg)
+
 # robowind Perception AI toolkit (Peep)
 
 Perceptual Element Ensemble Pipeline (peep) is platform than includes:
@@ -238,9 +238,3 @@ Alternatively, you may remove the hector trajectory server node if trajectory vi
 
 [Arch.pdf](https://github.com/robo-wind/robowind/files/6557206/Arch.pdf)
 
-
-  
-  
-  
-  
-```
