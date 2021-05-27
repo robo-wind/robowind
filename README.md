@@ -1,6 +1,6 @@
 # robowind Perception AI toolkit (Peep)
 
-Perceptual Element Ensemble Pipeline (peep), which is platform than includes:
+Perceptual Element Ensemble Pipeline (peep) is platform than includes:
 
     Modular Perception Elements
     Temporal & Spatial Elements & Fuses any cameras.   
@@ -77,6 +77,7 @@ On Drone we have done bridge Mission planner with ground control
 
 
 
+How to install PEEP
 
 Choose ROS version:
 
