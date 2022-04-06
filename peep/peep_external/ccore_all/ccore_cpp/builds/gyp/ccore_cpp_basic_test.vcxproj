@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{85713944-0855-70BC-BB76-A7C2CC1FD42A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ccore_cpp_basic_test</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props"/>
+  <ImportGroup Label="ExtensionSettings"/>
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros"/>
+  <PropertyGroup>
+    <ExecutablePath>$(ExecutablePath);$(MSBuildProjectDirectory)\.\bin\;$(MSBuildProjectDirectory)\.\bin\</ExecutablePath>
+    <IntDir>$(Configuration)\obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\$(ProjectName)$(TargetExt)</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;advapi32.lib;iphlpapi.lib;Rpcrt4.lib</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)$(TargetExt)</OutputFile>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;advapi32.lib;iphlpapi.lib;Rpcrt4.lib</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)$(TargetExt)</OutputFile>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;advapi32.lib;iphlpapi.lib;Rpcrt4.lib</AdditionalDependencies>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(ProjectName)$(TargetExt)</OutputFile>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;advapi32.lib;iphlpapi.lib;Rpcrt4.lib</AdditionalDependencies>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(ProjectName)$(TargetExt)</OutputFile>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="project.gyp"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\test\basic.cpp"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ccore_lib\builds\gyp\libccore.vcxproj">
+      <Project>{77C337D1-E459-9204-B83A-83C35FAC6434}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ccore_bson\builds\gyp\ccore_bson.vcxproj">
+      <Project>{FA4310BB-B4F9-ED6C-0091-692125F627A1}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\libbson\builds\gyp\libbson.vcxproj">
+      <Project>{536F5DA7-7FD8-EA3A-0ADC-93D7BFB50A52}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="ccore_cpp.vcxproj">
+      <Project>{F07000E4-24B9-FF84-4FC1-141B30C814DF}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\libzmq\builds\gyp\libzmq.vcxproj">
+      <Project>{E0D2354F-F25B-E45E-EB17-74DAD072310B}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\czmq\builds\gyp\libczmq.vcxproj">
+      <Project>{73EBD515-B955-0153-ED17-43544CEE72E7}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets"/>
+  <ImportGroup Label="ExtensionTargets"/>
+</Project>

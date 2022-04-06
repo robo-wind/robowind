@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\src\bson">
+      <UniqueIdentifier>{9641D5F8-D694-13FA-18FC-9934D25E9880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\builds">
+      <UniqueIdentifier>{18393DEE-537C-C77B-0764-61A85F8EF320}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\builds\gyp">
+      <UniqueIdentifier>{30B32512-2E13-32EA-B437-6F75133648E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\builds\gyp\win">
+      <UniqueIdentifier>{47FC5EC4-15EB-E92F-89D7-AFE51CF838A9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\builds">
+      <UniqueIdentifier>{18393DEE-537C-C77B-0764-61A85F8EF320}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\builds\gyp">
+      <UniqueIdentifier>{30B32512-2E13-32EA-B437-6F75133648E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\builds\gyp\win">
+      <UniqueIdentifier>{47FC5EC4-15EB-E92F-89D7-AFE51CF838A9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson">
+      <UniqueIdentifier>{4468D142-62D2-C8C0-FDBC-0B36F84FABCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\builds">
+      <UniqueIdentifier>{18393DEE-537C-C77B-0764-61A85F8EF320}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\builds\gyp">
+      <UniqueIdentifier>{30B32512-2E13-32EA-B437-6F75133648E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\libbson\builds\gyp\win">
+      <UniqueIdentifier>{47FC5EC4-15EB-E92F-89D7-AFE51CF838A9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="project.gyp"/>
+    <ClInclude Include="..\..\..\libbson\src\bson\b64_ntop.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\b64_pton.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bcon.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-atomic.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-clock.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-compat.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-context-private.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-context.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-decimal128.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-endian.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-error.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-iso8601-private.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-iter.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-json.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-keys.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-macros.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-md5.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-memory.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-oid.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-private.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-reader.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-stdint-win32.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-string.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-thread-private.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-timegm-private.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-types.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-utf8.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-value.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-version-functions.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson-writer.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\src\bson\bson.h">
+      <Filter>..\..\..\libbson\src\bson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\builds\gyp\win\bson-config.h">
+      <Filter>..\..\..\libbson\builds\gyp\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\builds\gyp\win\bson-stdint.h">
+      <Filter>..\..\..\libbson\builds\gyp\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libbson\builds\gyp\win\bson-version.h">
+      <Filter>..\..\..\libbson\builds\gyp\win</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

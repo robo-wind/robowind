@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_lib">
+      <UniqueIdentifier>{8FE40C57-A392-8EA8-EA97-D80FB3E7EEFF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_lib\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_lib">
+      <UniqueIdentifier>{8FE40C57-A392-8EA8-EA97-D80FB3E7EEFF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_lib\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_lib">
+      <UniqueIdentifier>{8FE40C57-A392-8EA8-EA97-D80FB3E7EEFF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_lib\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_bson">
+      <UniqueIdentifier>{DE241A03-5602-D1B4-5823-3BEDBAC545E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_bson\ccore_bson">
+      <UniqueIdentifier>{DE241A03-5602-D1B4-5823-3BEDBAC545E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_bson\ccore_bson\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_bson">
+      <UniqueIdentifier>{DE241A03-5602-D1B4-5823-3BEDBAC545E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_bson\ccore_bson">
+      <UniqueIdentifier>{DE241A03-5602-D1B4-5823-3BEDBAC545E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_bson\ccore_bson\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_bson">
+      <UniqueIdentifier>{DE241A03-5602-D1B4-5823-3BEDBAC545E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_bson\ccore_bson">
+      <UniqueIdentifier>{DE241A03-5602-D1B4-5823-3BEDBAC545E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_bson\ccore_bson\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_bson">
+      <UniqueIdentifier>{DE241A03-5602-D1B4-5823-3BEDBAC545E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_bson\ccore_bson">
+      <UniqueIdentifier>{DE241A03-5602-D1B4-5823-3BEDBAC545E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_bson\ccore_bson\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_bson">
+      <UniqueIdentifier>{DE241A03-5602-D1B4-5823-3BEDBAC545E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_bson\ccore_bson">
+      <UniqueIdentifier>{DE241A03-5602-D1B4-5823-3BEDBAC545E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_bson\ccore_bson\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_bson">
+      <UniqueIdentifier>{DE241A03-5602-D1B4-5823-3BEDBAC545E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_bson\ccore_bson">
+      <UniqueIdentifier>{DE241A03-5602-D1B4-5823-3BEDBAC545E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\ccore_bson\ccore_bson\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="project.gyp"/>
+    <ClInclude Include="..\..\include\ccore_bson_static.h">
+      <Filter>..\..\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ccore_libbson.h">
+      <Filter>..\..\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ccore_poll_libbson.h">
+      <Filter>..\..\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ccore_msg_libbson.h">
+      <Filter>..\..\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ccore_lib\include\ccore_common.h">
+      <Filter>..\..\..\ccore_lib\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ccore_lib\include\ccore.h">
+      <Filter>..\..\..\ccore_lib\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ccore_lib\include\ccore_poll.h">
+      <Filter>..\..\..\ccore_lib\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ccore_bson\ccore_bson\include\bson.h">
+      <Filter>..\..\..\ccore_bson\ccore_bson\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ccore_bson\ccore_bson\include\document.h">
+      <Filter>..\..\..\ccore_bson\ccore_bson\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ccore_bson\ccore_bson\include\element.h">
+      <Filter>..\..\..\ccore_bson\ccore_bson\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ccore_bson\ccore_bson\include\serializable.h">
+      <Filter>..\..\..\ccore_bson\ccore_bson\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ccore_bson\ccore_bson\include\shared_buffer.h">
+      <Filter>..\..\..\ccore_bson\ccore_bson\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ccore_bson\ccore_bson\include\typelist.h">
+      <Filter>..\..\..\ccore_bson\ccore_bson\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

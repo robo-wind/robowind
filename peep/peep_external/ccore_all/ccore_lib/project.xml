@@ -1,0 +1,20 @@
+<project 
+    name = "CCore"
+    script = "zproject.gsl">
+
+    <use project = "czmq" />
+    <use project = "libbson" pkgconfig="libbson-1.0" prefix = "bson-1.0" header = "bson/bson.h" />
+
+    <header name = "ccore_settings"/>
+
+    <class name = "ccore"/>
+    <class name = "ccore_async"/>
+    <class name = "ccore_cc"/>
+    <class name = "ccore_async_cc"/>
+    <class name = "impl/client_base" private = "1"/>
+    <class name = "impl/client_async" private = "1"/>
+    <class name = "impl/client_sync" private = "1"/>
+    <class name = "impl/async_handler" private = "1"/>
+
+    <main name = "ccore_listener">CCore Listener</main>
+</project>
