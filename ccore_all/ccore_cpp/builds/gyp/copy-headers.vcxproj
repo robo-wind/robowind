@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5912FE1D-8357-D167-AB11-168C0DA47AB4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>copy-headers</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props"/>
+  <ImportGroup Label="ExtensionSettings"/>
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros"/>
+  <PropertyGroup>
+    <ExecutablePath>$(ExecutablePath);$(MSBuildProjectDirectory)\.\bin\;$(MSBuildProjectDirectory)\.\bin\</ExecutablePath>
+    <IntDir>$(Configuration)\obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;advapi32.lib;iphlpapi.lib;Rpcrt4.lib</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;advapi32.lib;iphlpapi.lib;Rpcrt4.lib</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;advapi32.lib;iphlpapi.lib;Rpcrt4.lib</AdditionalDependencies>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;advapi32.lib;iphlpapi.lib;Rpcrt4.lib</AdditionalDependencies>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="project.gyp"/>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\include\ccore_msg_libbson.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\include\ccore_msg_libbson.h&quot; &quot;$(OutDir)include\ccore_msg_libbson.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../include/ccore_msg_libbson.h to $(OutDir)\include</Message>
+      <Outputs>$(OutDir)\include\ccore_msg_libbson.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\ccore_lib\include\ccore_poll.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\ccore_lib\include\ccore_poll.h&quot; &quot;$(OutDir)include\ccore_poll.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../ccore_lib/include/ccore_poll.h to $(OutDir)\include</Message>
+      <Outputs>$(OutDir)\include\ccore_poll.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\ccore_bson\ccore_bson\include\typelist.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\ccore_bson\ccore_bson\include\typelist.h&quot; &quot;$(OutDir)include\typelist.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../ccore_bson/ccore_bson/include/typelist.h to $(OutDir)\include</Message>
+      <Outputs>$(OutDir)\include\typelist.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\ccore_bson\ccore_bson\include\shared_buffer.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\ccore_bson\ccore_bson\include\shared_buffer.h&quot; &quot;$(OutDir)include\shared_buffer.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../ccore_bson/ccore_bson/include/shared_buffer.h to $(OutDir)\include</Message>
+      <Outputs>$(OutDir)\include\shared_buffer.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\ccore_bson\ccore_bson\include\serializable.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\ccore_bson\ccore_bson\include\serializable.h&quot; &quot;$(OutDir)include\serializable.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../ccore_bson/ccore_bson/include/serializable.h to $(OutDir)\include</Message>
+      <Outputs>$(OutDir)\include\serializable.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ccore_libbson.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\include\ccore_libbson.h&quot; &quot;$(OutDir)include\ccore_libbson.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../include/ccore_libbson.h to $(OutDir)\include</Message>
+      <Outputs>$(OutDir)\include\ccore_libbson.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ccore_poll_libbson.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\include\ccore_poll_libbson.h&quot; &quot;$(OutDir)include\ccore_poll_libbson.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../include/ccore_poll_libbson.h to $(OutDir)\include</Message>
+      <Outputs>$(OutDir)\include\ccore_poll_libbson.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\ccore_bson\ccore_bson\include\element.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\ccore_bson\ccore_bson\include\element.h&quot; &quot;$(OutDir)include\element.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../ccore_bson/ccore_bson/include/element.h to $(OutDir)\include</Message>
+      <Outputs>$(OutDir)\include\element.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\ccore_lib\include\ccore_common.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\ccore_lib\include\ccore_common.h&quot; &quot;$(OutDir)include\ccore_common.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../ccore_lib/include/ccore_common.h to $(OutDir)\include</Message>
+      <Outputs>$(OutDir)\include\ccore_common.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\ccore_lib\include\ccore.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\ccore_lib\include\ccore.h&quot; &quot;$(OutDir)include\ccore.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../ccore_lib/include/ccore.h to $(OutDir)\include</Message>
+      <Outputs>$(OutDir)\include\ccore.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\ccore_bson\ccore_bson\include\document.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\ccore_bson\ccore_bson\include\document.h&quot; &quot;$(OutDir)include\document.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../ccore_bson/ccore_bson/include/document.h to $(OutDir)\include</Message>
+      <Outputs>$(OutDir)\include\document.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\ccore_bson\ccore_bson\include\bson.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\ccore_bson\ccore_bson\include\bson.h&quot; &quot;$(OutDir)include\bson.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../ccore_bson/ccore_bson/include/bson.h to $(OutDir)\include</Message>
+      <Outputs>$(OutDir)\include\bson.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ccore_bson_static.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\include\ccore_bson_static.h&quot; &quot;$(OutDir)include\ccore_bson_static.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../include/ccore_bson_static.h to $(OutDir)\include</Message>
+      <Outputs>$(OutDir)\include\ccore_bson_static.h</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ccore_lib\builds\gyp\libccore.vcxproj">
+      <Project>{77C337D1-E459-9204-B83A-83C35FAC6434}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ccore_bson\builds\gyp\ccore_bson.vcxproj">
+      <Project>{FA4310BB-B4F9-ED6C-0091-692125F627A1}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\libbson\builds\gyp\libbson.vcxproj">
+      <Project>{536F5DA7-7FD8-EA3A-0ADC-93D7BFB50A52}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets"/>
+  <ImportGroup Label="ExtensionTargets"/>
+</Project>

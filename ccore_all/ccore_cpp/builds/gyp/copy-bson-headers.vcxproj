@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7331140C-1786-999C-42DC-DA749A7B9AC0}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>copy-bson-headers</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props"/>
+  <ImportGroup Label="ExtensionSettings"/>
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros"/>
+  <PropertyGroup>
+    <ExecutablePath>$(ExecutablePath);$(MSBuildProjectDirectory)\.\bin\;$(MSBuildProjectDirectory)\.\bin\</ExecutablePath>
+    <IntDir>$(Configuration)\obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;advapi32.lib;iphlpapi.lib;Rpcrt4.lib</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;advapi32.lib;iphlpapi.lib;Rpcrt4.lib</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;advapi32.lib;iphlpapi.lib;Rpcrt4.lib</AdditionalDependencies>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;advapi32.lib;iphlpapi.lib;Rpcrt4.lib</AdditionalDependencies>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\include;.;..\..\..\ccore_lib\include;..\..\..\libzmq\include;..\..\..\czmq\include;..\..\..\ccore_bson\ccore_bson\include;..\..\..\libbson\src;..\..\..\libbson\builds\gyp\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CCORE_CPP_GYP_BUILD;CCORE_CPP_HAVE_WINDOWS;ZMQ_STATIC;CZMQ_STATIC;BSON_STATIC;CCORE_STATIC;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="project.gyp"/>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-oid.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-oid.h&quot; &quot;$(OutDir)include\bson\bson-oid.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-oid.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-oid.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-iter.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-iter.h&quot; &quot;$(OutDir)include\bson\bson-iter.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-iter.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-iter.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-macros.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-macros.h&quot; &quot;$(OutDir)include\bson\bson-macros.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-macros.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-macros.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-writer.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-writer.h&quot; &quot;$(OutDir)include\bson\bson-writer.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-writer.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-writer.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-clock.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-clock.h&quot; &quot;$(OutDir)include\bson\bson-clock.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-clock.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-clock.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-json.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-json.h&quot; &quot;$(OutDir)include\bson\bson-json.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-json.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-json.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-keys.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-keys.h&quot; &quot;$(OutDir)include\bson\bson-keys.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-keys.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-keys.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\b64_pton.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\b64_pton.h&quot; &quot;$(OutDir)include\bson\b64_pton.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/b64_pton.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\b64_pton.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-memory.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-memory.h&quot; &quot;$(OutDir)include\bson\bson-memory.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-memory.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-memory.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-compat.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-compat.h&quot; &quot;$(OutDir)include\bson\bson-compat.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-compat.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-compat.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-error.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-error.h&quot; &quot;$(OutDir)include\bson\bson-error.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-error.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-error.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-timegm-private.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-timegm-private.h&quot; &quot;$(OutDir)include\bson\bson-timegm-private.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-timegm-private.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-timegm-private.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-context.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-context.h&quot; &quot;$(OutDir)include\bson\bson-context.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-context.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-context.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\builds\gyp\win\bson-config.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\builds\gyp\win\bson-config.h&quot; &quot;$(OutDir)include\bson\bson-config.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/builds/gyp/win/bson-config.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-config.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson.h&quot; &quot;$(OutDir)include\bson\bson.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\builds\gyp\win\bson-stdint.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\builds\gyp\win\bson-stdint.h&quot; &quot;$(OutDir)include\bson\bson-stdint.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/builds/gyp/win/bson-stdint.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-stdint.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-stdint-win32.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-stdint-win32.h&quot; &quot;$(OutDir)include\bson\bson-stdint-win32.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-stdint-win32.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-stdint-win32.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-endian.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-endian.h&quot; &quot;$(OutDir)include\bson\bson-endian.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-endian.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-endian.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-version-functions.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-version-functions.h&quot; &quot;$(OutDir)include\bson\bson-version-functions.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-version-functions.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-version-functions.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bcon.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bcon.h&quot; &quot;$(OutDir)include\bson\bcon.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bcon.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bcon.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-types.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-types.h&quot; &quot;$(OutDir)include\bson\bson-types.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-types.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-types.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-string.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-string.h&quot; &quot;$(OutDir)include\bson\bson-string.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-string.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-string.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-decimal128.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-decimal128.h&quot; &quot;$(OutDir)include\bson\bson-decimal128.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-decimal128.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-decimal128.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-utf8.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-utf8.h&quot; &quot;$(OutDir)include\bson\bson-utf8.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-utf8.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-utf8.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-private.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-private.h&quot; &quot;$(OutDir)include\bson\bson-private.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-private.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-private.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-md5.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-md5.h&quot; &quot;$(OutDir)include\bson\bson-md5.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-md5.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-md5.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-reader.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-reader.h&quot; &quot;$(OutDir)include\bson\bson-reader.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-reader.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-reader.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-iso8601-private.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-iso8601-private.h&quot; &quot;$(OutDir)include\bson\bson-iso8601-private.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-iso8601-private.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-iso8601-private.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-context-private.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-context-private.h&quot; &quot;$(OutDir)include\bson\bson-context-private.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-context-private.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-context-private.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\builds\gyp\win\bson-version.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\builds\gyp\win\bson-version.h&quot; &quot;$(OutDir)include\bson\bson-version.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/builds/gyp/win/bson-version.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-version.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-value.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-value.h&quot; &quot;$(OutDir)include\bson\bson-value.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-value.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-value.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-thread-private.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-thread-private.h&quot; &quot;$(OutDir)include\bson\bson-thread-private.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-thread-private.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-thread-private.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\bson-atomic.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\bson-atomic.h&quot; &quot;$(OutDir)include\bson\bson-atomic.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/bson-atomic.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\bson-atomic.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\libbson\src\bson\b64_ntop.h">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)include\bson&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;..\..\..\libbson\src\bson\b64_ntop.h&quot; &quot;$(OutDir)include\bson\b64_ntop.h&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying ../../../libbson/src/bson/b64_ntop.h to $(OutDir)\include\bson</Message>
+      <Outputs>$(OutDir)\include\bson\b64_ntop.h</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ccore_lib\builds\gyp\libccore.vcxproj">
+      <Project>{77C337D1-E459-9204-B83A-83C35FAC6434}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ccore_bson\builds\gyp\ccore_bson.vcxproj">
+      <Project>{FA4310BB-B4F9-ED6C-0091-692125F627A1}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\libbson\builds\gyp\libbson.vcxproj">
+      <Project>{536F5DA7-7FD8-EA3A-0ADC-93D7BFB50A52}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets"/>
+  <ImportGroup Label="ExtensionTargets"/>
+</Project>

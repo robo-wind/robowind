@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/BVLC/caffe.git
+	branch = master
+	commit = 99bd99795dcdf0b1d3086a8d67ab1782a8a08383
+	parent = 6d7d052132e47e7a5e6b3b28703b68e7a87b017c
+	method = merge
+	cmdver = 0.4.0

@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/IntelRealSense/librealsense.git
+	branch = master
+	commit = 65a5b78c6363c5c6fc5d2c722005ca1c6b3d2b80
+	parent = fe6165f91b7feb1bd204c9421a5e46259e867a95
+	method = merge
+	cmdver = 0.4.0
