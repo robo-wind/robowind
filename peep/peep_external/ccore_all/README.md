@@ -9,7 +9,7 @@ For general information about CommuniCore, please see the
 
 CommuniCore SDK for C++ can utilize one of two BSON encoding libraries, 
 MongoDB's [libbson](http://mongoc.org/libbson/current/index.html) or Robowind's 
-[ccore_bson](https://gitlab.wdi.disney.com/communicore/libraries/ccore_all/wikis/ccore_bson). 
+[ccore_bson]
 Due to much friendlier systanx, ccore_bson is recommended. 
 
 For C SDK, only libbson is supported, due to ccore_bson's dependency on C++.
